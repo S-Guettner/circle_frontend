@@ -1,4 +1,4 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { Button, Text, Image, StyleSheet, StatusBar } from 'react-native';
 import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
@@ -7,7 +7,7 @@ import Search from './search.js';
 import Upload from './upload.js';
 import Profile from './profile.js';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 /* const [hidden, setHidden] = useState(false);
 const [statusBarStyle, setStatusBarStyle] = useState('default');
