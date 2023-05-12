@@ -70,7 +70,7 @@ const Profile = () => {
                 <Image style={styles.imageProfile} source={{ uri: profileData?.avatarMidsize }} />
                 <Text style={styles.userName}>{profileData?.fullName}</Text>
                 <Text style={styles.jobTitle}>{profileData?.jobTitle}</Text>
-                <Text style={styles.userDescription}>{profileData?.userDescription}</Text>
+                <Text style={styles.userDescription}>{profileData?.profileCaption}</Text>
 {/*                     <TouchableOpacity onPress={handlePress}>
                 <Text style={styles.websiteLink}>{profileData?.website}</Text>
                     </TouchableOpacity> */}
@@ -163,23 +163,25 @@ const styles = StyleSheet.create({
         borderRadius: 200,
         marginRight: "auto",
         marginLeft:"auto",
-        marginTop:20,
+        marginTop:15,
         marginBottom:10
 
     },
     jobTitle:{
-        marginBottom:15,
-        textAlign:"center"
+        marginBottom:35,
+        textAlign:"center",
+        fontWeight:"bold"
     },
     userDescription:{
-        marginBottom:10,
+        marginBottom:35,
         textAlign: 'center',
+        fontWeight:"500"
         
     },
     userName:{
         fontWeight:"bold",
         fontSize:25,
-        marginBottom:10,
+        marginBottom:5,
         textAlign:"center"
         
     },
@@ -220,7 +222,8 @@ const styles = StyleSheet.create({
     },
     statsText:{
         fontSize:21,
-        fontWeight:"bold"
+        fontWeight:"bold",
+        textAlign:"center"
     },
     statsDescription:{
         fontSize:15
