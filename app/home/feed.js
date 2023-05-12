@@ -15,6 +15,7 @@ const Feed = () => {
 
     const [reload,setReload] = useState(false)
 
+    const [fetchLimit,setFetchLimit] = useState(10)
 
     console.log(scrollPosition)
     
@@ -43,6 +44,7 @@ const Feed = () => {
                     },
                     body: JSON.stringify({
                         userId: userID,
+                        limitValue:fetchLimit
                     }),
                 });
                 const json = await response.json();
