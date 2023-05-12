@@ -16,11 +16,11 @@ const PostLink = ({postImage,setRenderMode,postId,setPostId}) => {
 
     return (
         
-            <View style={styles.postContainer} >
+           
                 <Image 
                 style={styles.postImage} 
                 source={{ uri: postImage }} />
-            </View>
+           
             
 
         
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     },
     postContainer:{
         paddingTop:20,
-        width:110,
+        width:10,
         height:110
     }
 })

@@ -34,7 +34,7 @@ const Profile = () => {
                     },
                     body: JSON.stringify({
                         /******************************************* ändern zu userId variable !!!! ***********************************************************************************************/
-                        userId: "645e3976d3ae8d816b2367b1",
+                        userId: "645e3976d3ae8d816b2367d3",
                     }),
                 })
                 const userData = await response.json();
@@ -96,23 +96,24 @@ const Profile = () => {
               
             </View>
 
-            
-              <ScrollView contentOffset={{ y: 0 }}  showsVerticalScrollIndicator={false} overScrollMode="always"  style={styles.postsContainer} >
+              <ScrollView   showsVerticalScrollIndicator={false} overScrollMode="always"  style={styles.postsContainer} >
+            <View style={styles.postLinkContainer}>
                 {posts.map((post) => {
                     return(
-                        <View style={styles.postLinkContainer}>
-                            <PostLink
-                            key={post._id}
-                            postImage={post.postImage}
-                            postId={post._id}
-                            setRenderMode={setRenderMode}
-                            setPostId={setPostId}
-                            />
-                        </View>
                         
-                    )
-                })}
-                </ScrollView>
+                        <PostLink
+                        key={post._id}
+                        postImage={post.postImage}
+                        postId={post._id}
+                        setRenderMode={setRenderMode}
+                        setPostId={setPostId}
+                        />
+                        
+                        
+                        )
+                    })}
+            </View>
+                    </ScrollView>
             
         </View>
     )
@@ -123,7 +124,7 @@ export default Profile
 const styles = StyleSheet.create({
     postsContainer:{
         
-       height: "100%" 
+       height: 600
  
         
 /*         gap:5,
@@ -135,6 +136,11 @@ const styles = StyleSheet.create({
       /*   height:110,
         width:110,
         borderRadius:10, */
+        gap:10,
+        flexDirection:"row",
+        flexWrap:"wrap",
+        paddingTop:20,
+        justifyContent:"center"
        
     },
     navBar:{
